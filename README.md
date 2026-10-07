@@ -27,8 +27,6 @@ Aplicação de console em Java para cadastrar e listar produtos eletrônicos (ce
 - **JDK 25 ou superior.** O arquivo `Main.java` usa recursos do Java moderno (método `main` de instância, sem `public static` e sem `String[] args`, e `println` chamado diretamente). Em versões anteriores, esse código pode não compilar sem flags de preview.
 - **IntelliJ IDEA** (o projeto foi desenvolvido nele, como indicam a pasta `.idea` e o arquivo `.iml`).
 
-> ⚠️ Confirme a versão do JDK usada no seu projeto e ajuste este item se necessário.
-
 ## Estrutura do projeto
 
 ```
@@ -185,6 +183,7 @@ Insira o nome: Iphone 16
 Insira o preço: 5000
 Insira a marca: Apple
 Insira a quantidade de ram: 8
+-------------------------------
 Digite 1 para Cadastrar Celular
 Digite 2 para Cadastrar Notebook
 Digite 3 para Listar produtos
@@ -232,15 +231,16 @@ Digite 3 para Listar produtos
 Digite 0 para Sair
 Informe a opção desejada: 5
 Opção inválida !
+-----------------------------------
 Digite 1 para Cadastrar Celular
 Digite 2 para Cadastrar Notebook
 Digite 3 para Listar produtos
 Digite 0 para Sair
 Informe a opção desejada:
 Insira um numero !!!
+------------------------------------
 Informe a opção desejada: ahaj
 Insira um numero !!!
-Informe a opção desejada:
 ```
 
 ## Conceitos de POO aplicados
@@ -250,11 +250,3 @@ Informe a opção desejada:
 - **Interface:** `Garantia` define um contrato que classes diferentes implementam de formas diferentes.
 - **Polimorfismo:** o `estoque` é um `ArrayList<Eletronico>` que guarda celulares e notebooks. Ao listar, `calcularPrecoFinal()` executa o cálculo correto de cada tipo, e `instanceof` identifica o tipo para exibir o atributo específico (RAM ou processador).
 - **Encapsulamento:** os atributos são `private` e o acesso é feito por getters e setters.
-
-## Limitações e melhorias futuras
-
-- **Sem persistência:** o estoque fica apenas em memória (`ArrayList`), então os dados são perdidos ao encerrar o programa. Uma melhoria possível é salvar em arquivo ou banco de dados.
-- **Cast para `Garantia` na listagem:** a `Main` faz `(Garantia) item`. Isso funciona porque todo eletrônico cadastrado hoje (`Celular` ou `Notebook`) implementa `Garantia`, mas lançaria `ClassCastException` se um eletrônico sem garantia fosse criado. Uma alternativa é verificar com `instanceof Garantia` antes do cast.
-- **`exibirDetalhes()` sem uso:** o método existe em `Eletronico`, mas imprime apenas uma linha em branco e a listagem da `Main` não o utiliza.
-- **Memória RAM aceita 0:** como a RAM é validada com `correcaoInt` (que aceita valores `>= 0`), é possível cadastrar um celular com 0 GB.
-- **Funcionalidades ausentes:** não há opções de editar, remover ou buscar produtos.
