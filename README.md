@@ -13,8 +13,7 @@ Aplicação de console em Java para cadastrar e listar produtos eletrônicos (ce
 - [Como usar](#como-usar)
 - [Exemplos de execução](#exemplos-de-execução)
 - [Conceitos de POO aplicados](#conceitos-de-poo-aplicados)
-- [Limitações e melhorias futuras](#limitações-e-melhorias-futuras)
-
+  
 ## Funcionalidades
 
 - Cadastro de **celulares** (nome, preço, marca e memória RAM).
