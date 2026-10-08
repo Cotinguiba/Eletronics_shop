@@ -249,3 +249,7 @@ Insira um numero !!!
 - **Interface:** `Garantia` define um contrato que classes diferentes implementam de formas diferentes.
 - **Polimorfismo:** o `estoque` é um `ArrayList<Eletronico>` que guarda celulares e notebooks. Ao listar, `calcularPrecoFinal()` executa o cálculo correto de cada tipo, e `instanceof` identifica o tipo para exibir o atributo específico (RAM ou processador).
 - **Encapsulamento:** os atributos são `private` e o acesso é feito por getters e setters.
+
+## Autores
+🧑🏾‍💻 https://github.com/Cotinguiba
+👩🏻‍💻
