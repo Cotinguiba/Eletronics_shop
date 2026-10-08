@@ -251,5 +251,7 @@ Insira um numero !!!
 - **Encapsulamento:** os atributos são `private` e o acesso é feito por getters e setters.
 
 ## Autores
-🧑🏾‍💻 https://github.com/Cotinguiba
-👩🏻‍💻
+🧑🏾‍💻 <a href="https://github.com/Cotinguiba">
+Paulo Henrique</a>
+👩🏻‍💻 <a href="https://github.com/Iris-Caetano">
+Iris Caetano</a>
